@@ -1,15 +1,13 @@
+
 import { useState } from "react";
 import { Form , useNavigate, useLocation, Link } from "react-router";
 import { useAuth } from "../contexts/Authcontext";
 
-import bird from '../assets/emojione_bird.svg';
 import { FiArrowLeft } from "react-icons/fi";
 import { FaArrowRight } from "react-icons/fa";
 
-export default function Login() {
-
+export default function Signup() {
   const [error, setError] = useState();
-
   const { login } = useAuth();
   const location = useLocation();
   console.log(location);
@@ -32,12 +30,12 @@ export default function Login() {
       body: JSON.stringify(data)
     })
   
-    const userdata = await response.json()
+    const userData = await response.json()
     
     if (!response.ok) {
-      setError("Please provide login credentials")
+      setError("Please provide Signup credentials")
     } else {
-      login(userdata.accessToken)
+      login(userData.accessToken)
       navigate(from, { replace: true })
     }    
   }
@@ -45,21 +43,26 @@ export default function Login() {
   return (
     <div className="login disFlexColumn">
       <Link to="/" className="left-arrow"><FiArrowLeft /></Link>
-      <h4>Login</h4>
-      <div className="bird--img">
-        <img src={bird} alt="Bird" />
-      </div>
+      <h4>Sign Up</h4>
       <Form onSubmit={handleLogin}>
         <div className="formgroup">
           <label htmlFor="email">Email address</label>
           <input type="email" name="email" id="email" />
         </div>
         <div className="formgroup">
+          <label htmlFor="username">Username</label>
+          <input type="text" name="username" id="username" />
+        </div>
+        <div className="formgroup">
           <label htmlFor="password">Password</label>
           <input type="password" name="password" id="password" />
         </div>
+        <div className="formgroup">
+          <label htmlFor="confirmpassword">Confirm Password</label>
+          <input type="password" name="confirmpassword" id="confirmpassword" />
+        </div>
         {error && (<div className="errorSms">{error}</div>)}
-        <button type="submit" className="btn">Login<FaArrowRight /></button>
+        <button type="submit" className="btn">Sign Up<FaArrowRight /></button>
       </Form>
     </div>
   )

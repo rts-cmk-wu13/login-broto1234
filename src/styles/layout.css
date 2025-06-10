@@ -1,3 +1,12 @@
 .disFlex {
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.disFlexColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
