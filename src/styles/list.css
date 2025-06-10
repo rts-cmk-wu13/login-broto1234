@@ -1,0 +1,46 @@
+.list {
+  padding: 2rem;
+}
+
+.list--links {
+  gap: 1rem;
+}
+
+.list--link {
+  padding: 0.3rem 0.5rem;
+  border-radius: 0.5rem;
+  color: var(--white-color);
+  background-color: var(--primary-color);
+  font-weight: 600;
+  text-align: center;
+}
+
+.statements, .secrets {
+  padding: 1rem 1.2rem;
+}
+
+.statements ul, .secrets ul {
+  margin-block-start: 2.5rem;
+}
+
+.statements li p {
+  margin-block-end: 1.3rem;
+  /* color: var(--textBc-color); */
+}
+
+.secrets--quote {
+  width: 22ch;
+  text-wrap: balance;
+}
+.secrets li {
+  margin-block-end: 1.7rem;
+}
+
+.secrets p {
+  margin-block-end: 0;
+}
+
+.secret--left {
+  text-align: end;
+  font-style: italic;
+}

@@ -1,0 +1,42 @@
+.btn, .logOut {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 10px 20px;
+  margin-block: 0.5rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--white-color);
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 0.8rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.btn--bgWhite {
+  background-color: var(--white-color);
+  color: var(--primary-color);
+  /* font-weight: 900; */
+  /* align-self: center; */
+}
+
+.left-arrow {
+  align-self: self-start;
+  color: var(--white-color);
+  background-color: var(--primary-color);
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.5rem;
+}
+
+button.btn {
+  margin-block-start: 3rem;
+}
+
+.logOut {
+  width: 5rem;
+  align-self: self-end;
+  margin-block-end: 1.5rem;
+}

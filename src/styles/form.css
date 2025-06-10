@@ -1,0 +1,20 @@
+form {
+  width: 100%;
+  margin-block-start: 3rem;
+}
+
+.formgroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-block-end: 1rem;
+}
+
+.formgroup label {
+  font-size: 0.8rem;
+  color: var(--textBc-color);
+}
+
+.formgroup input {
+  border: 0.05rem solid var(--textBc-color);
+}
